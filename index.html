@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab8</title>
+    <link rel="stylesheet" href="lab8.css">
+    <script src="lab8.js" defer></script>
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <div class="setup-card" id="setup-screen">
+            <h1>Гра «Більше число»</h1>
+            <p class="subtitle">Введіть ім'я, щоб розпочати матч до 3 перемог</p>
+            <div class="input-group">
+                <input type="text" id="username-input" placeholder="Ваше ім'я..." maxlength="15">
+                <button id="start-btn">Почати гру</button>
+            </div>
+            <p class="error-msg" id="error-msg"></p>
+        </div>
+
+        <div class="game-board hidden" id="game-screen">
+            <div class="status-bar" id="status-text">Натисніть «Кинути числа», щоб почати!</div>
+
+            <div class="arena">
+                <div class="player-card" id="user-card">
+                    <div class="player-header">
+                        <span class="player-title" id="display-name">Гравець</span>
+                        <span class="badge" id="user-score">0</span>
+                    </div>
+                    <div class="number-box" id="user-num">-</div>
+                </div>
+
+                <div class="vs-divider">VS</div>
+
+                <div class="player-card" id="comp-card">
+                    <div class="player-header">
+                        <span class="player-title">Комп'ютер</span>
+                        <span class="badge" id="comp-score">0</span>
+                    </div>
+                    <div class="number-box" id="comp-num">-</div>
+                </div>
+            </div>
+
+            <div class="action-panel">
+                <button class="main-btn" id="roll-btn">Кинути числа (1–100)</button>
+                <button class="secondary-btn hidden" id="reset-btn">Зіграти ще раз</button>
+            </div>
+            <button class="change-btn" id="chng-btn">Змінити ім'я</button>
+        </div>
+    </div>
+    
+</body>
+</html>
